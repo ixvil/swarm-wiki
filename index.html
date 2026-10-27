@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swarm Survivor: Horde Hunter Wiki</title>
+<meta name="description" content="The Swarm Survivor: Horde Hunter wiki in English and Russian.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0E0B1E;color:#F4F1FF;font:16px/1.5 system-ui,sans-serif;text-align:center}
+a{color:#FFD35C;font-weight:700;font-size:20px;margin:0 12px}</style>
+<script>
+(function () {
+  var l = null;
+  try { l = localStorage.getItem("ssw-lang"); } catch (e) {}
+  if (l !== "en" && l !== "ru") {
+    var langs = navigator.languages || [navigator.language || "en"];
+    l = "en";
+    for (var i = 0; i < langs.length; i++) {
+      var c = String(langs[i]).toLowerCase().slice(0, 2);
+      if (c === "ru" || c === "be" || c === "kk") { l = "ru"; break; }
+      if (c === "en") break;
+    }
+  }
+  location.replace(l + "/index.html" + location.hash);
+})();
+</script>
+</head>
+<body>
+<p>Swarm Survivor: Horde Hunter Wiki<br><a href="en/index.html" hreflang="en">English</a> <a href="ru/index.html" hreflang="ru" lang="ru">Русский</a></p>
+</body>
+</html>
